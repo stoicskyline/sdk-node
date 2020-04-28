@@ -2,10 +2,20 @@
 
 JavaScript helpers in TypeScript
 
+To use as a module:
+
 ```shell script
 yarn add @jorgechen/sdk
 ```
 
+## Updates
+
+Compile and commit changes:
+
+```sh
+yarn build
+git add lib/ src/
+```
 
 ## Maintain
 
