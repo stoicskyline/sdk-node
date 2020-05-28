@@ -9,7 +9,6 @@
   "license": "MIT",
   "scripts": {
     "build": "rimraf lib/ && tsc",
-    "publish": "npm publish --access public",
     "test": "jest"
   },
   "devDependencies": {
