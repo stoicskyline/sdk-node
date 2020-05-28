@@ -36,3 +36,12 @@ In the implementing project:
 ```shell script
 yalc add @jorgechen/sdk
 ```
+
+NPM package commands:
+```shell script
+# Edit version in package.json then 
+yarn publish
+
+# Remove a specific package version
+npm unpublish @jorgechen/sdk-js@0.1.0
+```
