@@ -1,5 +1,5 @@
 {
-  "name": "sdk",
+  "name": "@jorgechen/sdk-js",
   "version": "0.1.0",
   "description": "JavaScript helpers in TypeScript",
   "main": "lib/index.js",
