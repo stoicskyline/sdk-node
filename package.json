@@ -1,6 +1,6 @@
 {
   "name": "@jorgechen/sdk-js",
-  "version": "0.1.0-beta.4",
+  "version": "0.1.0-beta.5",
   "description": "JavaScript helpers in TypeScript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,6 +9,8 @@
   "license": "MIT",
   "scripts": {
     "build": "rimraf lib/ && tsc",
+    "prepub": "yarn build",
+    "pub": "yarn publish --access public",
     "test": "jest"
   },
   "devDependencies": {
