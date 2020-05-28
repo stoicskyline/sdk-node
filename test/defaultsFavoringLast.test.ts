@@ -1,6 +1,6 @@
 import { defaultsFavoringLast } from '../src'
 
-describe('This SDK', () => {
+describe('defaultsFavoringLast', () => {
   it('merge objects with defaults', async () => {
     const input = [
       {
@@ -24,18 +24,6 @@ describe('This SDK', () => {
     })
   })
 
-  // it('creates new hash when updating password', async () => {
-  //   const original = 'Turtle123!'
-  //   const updated = 'Monkey69!'
-  //
-  //   const user = await User.query().insert({ email: 'misty@poke.mon', password: original })
-  //   await expect(user.verifyPassword(original)).resolves.toBe(true)
-  //   await expect(user.verifyPassword(updated)).resolves.toBe(false)
-  //
-  //   const updatedUser = await user.$query().patchAndFetchById(user.id, { password: updated })
-  //   await expect(updatedUser.verifyPassword(updated)).resolves.toBe(true)
-  // })
-  //
   // it('cannot update id of existing model', async () => {
   //   const user = await User.query().insert({ email: 'hercules@greece.myth', password: 'Tru3Her0' })
   //   const updateUser = user.$query().patchAndFetchById(user.id, { id: 420 })
