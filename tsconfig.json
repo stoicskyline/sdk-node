@@ -57,5 +57,10 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "lib", "knav.ts"]
+  "exclude": [
+    "node_modules",
+    "lib",
+    "knav.ts",
+    "**/*.test.ts"
+  ]
 }
