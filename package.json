@@ -8,6 +8,7 @@
   "author": "jorge",
   "license": "MIT",
   "scripts": {
+    "prebuild": "yarn test",
     "build": "rimraf lib/ && tsc",
     "prepub": "yarn build",
     "pub": "yarn publish --access public",
