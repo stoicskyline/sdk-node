@@ -1,23 +1,21 @@
-# SDK
+# SDK in NodeJS
 
-JavaScript helpers in TypeScript
+Useful for any backend or frontend JavaScript or TypeScript project.
 
-To use as a module:
+## Installation
 
 ```shell script
-yarn add @jorgechen/sdk
+yarn add @jorgechen/sdk-js
 ```
 
-## Updates
+## Maintain
 
 Compile and commit changes:
 
 ```sh
 yarn build
-git add lib/ src/
+git add --all  
 ```
-
-## Maintain
 
 To locally develop the package, install Yalc:
 
@@ -37,12 +35,13 @@ In the implementing project:
 yalc add @jorgechen/sdk
 ```
 
+
+## Publishing
+
 NPM package commands:
 ```shell script
 # Edit version in package.json then
-yarn build
-git add --all  
-yarn publish --access public
+yarn pub
 
 # Remove a specific package version
 npm unpublish @jorgechen/sdk-js@0.1.0
