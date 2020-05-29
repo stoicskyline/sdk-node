@@ -1,11 +1,9 @@
 {
   "name": "@jorgechen/sdk-js",
   "version": "0.1.0-beta.6",
-  "description": "JavaScript helpers in TypeScript",
+  "description": "JavaScript helpers with TypeScript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "repository": "https://github.com/jorgechen/sdk-js.git",
-  "author": "jorge",
   "license": "MIT",
   "scripts": {
     "prebuild": "yarn test",
