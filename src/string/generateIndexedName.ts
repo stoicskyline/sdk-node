@@ -1,5 +1,3 @@
-import { dehumanize } from './dehumanize'
-
 const DELIMITER = '-'
 const REGEX_SUFFIX_INDEX = /\b\d+$/
 
@@ -9,9 +7,8 @@ export interface IndexedNameOptions {
 }
 
 export const generateIndexedName = ({ existing = [], name }: IndexedNameOptions) => {
-  const safeName = dehumanize(name, DELIMITER)
-  if (!existing.includes(safeName)) {
-    return safeName
+  if (!existing.includes(name)) {
+    return name
   }
 
   let max = 0
@@ -24,5 +21,5 @@ export const generateIndexedName = ({ existing = [], name }: IndexedNameOptions)
       }
     }
   })
-  return `${safeName ? safeName + DELIMITER : ''}${max + 1}`
+  return `${name ? name + DELIMITER : ''}${max + 1}`
 }
