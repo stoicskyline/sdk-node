@@ -14,16 +14,15 @@ export const generateIndexedName = ({ existing = [], name }: IndexedNameOptions)
     return safeName
   }
 
-  const indices: number[] = []
+  let max = 0
   existing.forEach(str => {
     const matches = str.match(REGEX_SUFFIX_INDEX)
     if (matches) {
       const number = parseInt(matches[0])
-      if (!isNaN(number)) {
-        indices.push(number)
+      if (number > max) {
+        max = number
       }
     }
   })
-  const max = Math.max(...indices)
-  return `${safeName}${DELIMITER}${max + 1}`
+  return `${safeName ? safeName + DELIMITER : ''}${max + 1}`
 }

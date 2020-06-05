@@ -27,4 +27,18 @@ describe('generateIndexedName', () => {
       name: 'pic',
     })).toBe('pic')
   })
+
+  it('handles empty string', async () => {
+    await expect(generateIndexedName({
+      existing: [],
+      name: '',
+    })).toBe('')
+  })
+
+  it('handles empty string with existing empty string', async () => {
+    await expect(generateIndexedName({
+      existing: [''],
+      name: '',
+    })).toBe('1')
+  })
 })
