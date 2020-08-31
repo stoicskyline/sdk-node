@@ -32,14 +32,16 @@ yalc publish
 
 In the implementing project:
 ```shell script
-yalc add @jorgechen/sdk
+yalc add @jorgechen/sdk-node
 ```
 
 
 ## Publishing
 
-NPM package commands:
 ```shell script
+# Using npmjs.org credentials
+npm login
+
 # Edit version in package.json then
 yarn pub
 

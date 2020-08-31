@@ -1,6 +1,6 @@
 {
   "name": "@jorgechen/sdk-node",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "JavaScript helpers with TypeScript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,6 +10,7 @@
     "build": "rimraf lib/ && tsc",
     "prepub": "yarn build",
     "pub": "yarn publish --access public",
+    "postpub": "echo 'Publish succeed, but YOU MUST NOW COMMIT CHANGES!'",
     "test": "jest"
   },
   "devDependencies": {

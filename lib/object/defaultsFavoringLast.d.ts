@@ -1,1 +1,1 @@
-export declare const defaultsFavoringLast: (items: object[], qualifyValue?: (v: any) => boolean) => any;
+export declare const defaultsFavoringLast: (objects: object[], qualifyValue?: (v: any) => boolean) => any;
