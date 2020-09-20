@@ -1,6 +1,6 @@
 {
   "name": "@jorgechen/sdk-node",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "JavaScript helpers with TypeScript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

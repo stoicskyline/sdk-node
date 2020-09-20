@@ -2,11 +2,12 @@
 
 Useful for any backend or frontend JavaScript or TypeScript project.
 
-## Installation
+## Usage
 
 ```shell script
 yarn add @jorgechen/sdk-node
 ```
+
 
 ## Maintain
 
@@ -36,13 +37,14 @@ yalc add @jorgechen/sdk-node
 ```
 
 
-## Publishing
+## Publish to NPM
 
 ```shell script
 # Using npmjs.org credentials
 npm login
 
-# Edit version in package.json then
+# 1. Edit version in package.json
+# 2. Run publish
 yarn pub
 
 # Remove a specific package version
