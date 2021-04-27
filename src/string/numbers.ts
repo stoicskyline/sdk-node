@@ -6,3 +6,31 @@ export const isNumeric = (input: any) => {
   return !isNaN(input) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
     !isNaN(parseFloat(input)) // ...and ensure strings of whitespace fail
 }
+
+// Converts a number into a placing
+export function stringifyPlacing(n: number) {
+  if (typeof n !== 'number') {
+    return n
+  }
+  // If float, truncate the decimals
+  n = (n | 0)
+
+  const lastDigit = n % 10
+  let suffix : string
+  switch (lastDigit){
+    case 1:
+      suffix = 'st'
+      break
+    case 2:
+      suffix = 'nd'
+      break
+    case 3:
+      suffix = 'rd'
+      break
+    default:
+      suffix = 'th'
+      break
+  }
+  return n + suffix
+}
+
