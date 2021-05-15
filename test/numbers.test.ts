@@ -50,6 +50,11 @@ describe('stringifyPlacing()', () => {
   it('4th place', async () => {
     await expect(stringifyPlacing(4)).toBe('4th')
   })
+  it('place 11, 12, 13', async () => {
+    await expect(stringifyPlacing(11)).toBe('11th')
+    await expect(stringifyPlacing(12)).toBe('12th')
+    await expect(stringifyPlacing(13)).toBe('13th')
+  })
   it('88th place', async () => {
     await expect(stringifyPlacing(88)).toBe('88th')
   })

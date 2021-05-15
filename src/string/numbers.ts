@@ -15,21 +15,26 @@ export function stringifyPlacing(n: number) {
   // If float, truncate the decimals
   n = (n | 0)
 
-  const lastDigit = n % 10
-  let suffix : string
-  switch (lastDigit){
-    case 1:
-      suffix = 'st'
-      break
-    case 2:
-      suffix = 'nd'
-      break
-    case 3:
-      suffix = 'rd'
-      break
-    default:
-      suffix = 'th'
-      break
+
+  let suffix: string
+  if (11 <= n && n <= 13) {
+    suffix = 'th'
+  } else {
+    const lastDigit = n % 10
+    switch (lastDigit) {
+      case 1:
+        suffix = 'st'
+        break
+      case 2:
+        suffix = 'nd'
+        break
+      case 3:
+        suffix = 'rd'
+        break
+      default:
+        suffix = 'th'
+        break
+    }
   }
   return n + suffix
 }

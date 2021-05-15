@@ -24,6 +24,9 @@ To locally develop the package, install Yalc:
 yarn global add yalc
 ```
 
+
+### Maintain - test locally
+
 Then we can publish this package locally: 
 
 ```shell script
