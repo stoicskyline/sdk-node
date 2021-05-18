@@ -7,6 +7,8 @@ describe('defaultsFavoringLast', () => {
         a: 1,
         b: 2,
         c: 44,
+        boo: false,
+        emptyStr: '',
       },
       {
         a: 3,
@@ -20,7 +22,96 @@ describe('defaultsFavoringLast', () => {
       a: 3,
       b: 2,
       c: 44,
-      d: undefined,
+      d: null,
+      boo: false,
+      emptyStr: '',
+    })
+  })
+
+  it('defaults to empty string if previous is unqualified', async () => {
+    const input = [
+      {
+        emptyStr: null,
+      },
+      {
+        emptyStr: '',
+      },
+    ]
+    expect(defaultsFavoringLast(input)).toStrictEqual({
+      emptyStr: '',
+    })
+  })
+
+  it('defaults to null/undefined', async () => {
+    const input = [
+      {
+        val: null,
+      },
+      {
+        val: undefined,
+      },
+    ]
+    expect(defaultsFavoringLast(input)).toStrictEqual({
+      val: undefined,
+    })
+  })
+
+  it('defaults to current unqualified, if previous is empty string', async () => {
+    const input = [
+      {
+        emptyStr: '',
+      },
+      {
+        emptyStr: null,
+      },
+    ]
+    expect(defaultsFavoringLast(input)).toStrictEqual({
+      emptyStr: null,
+    })
+  })
+
+  it('defaults to previous if current is empty string', async () => {
+    const input = [
+      {
+        emptyStr: 'lorem',
+      },
+      {
+        emptyStr: '',
+      },
+    ]
+    expect(defaultsFavoringLast(input)).toStrictEqual({
+      emptyStr: 'lorem',
+    })
+  })
+
+  it('retains false boolean', async () => {
+    const input = [
+      {
+        boo: false,
+      },
+      {
+        boo: undefined,
+      },
+      {
+        boo: null,
+      },
+    ]
+    expect(defaultsFavoringLast(input)).toStrictEqual({
+      boo: false,
+    })
+  })
+
+  it('merges arrays', async () => {
+    const input = [
+      {
+        list: [123],
+      },
+      {
+        list: [],
+      },
+    ]
+    expect(defaultsFavoringLast(input)).toStrictEqual({
+      list: [123],
     })
   })
 
