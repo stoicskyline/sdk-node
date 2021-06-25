@@ -23,8 +23,8 @@ function qualifyExisting(value: any): boolean {
  * @param objects a list of objects
  * @param qualifyValue choose which values are worth considering, by default null/undefined is ignored
  */
-export const defaultsFavoringLast = (objects: object[], qualifyValue = qualifyExisting) => {
-  const items = objects.filter(x => typeof x === 'object')
+export const defaultsFavoringLast = (objects: any[], qualifyValue = qualifyExisting) => {
+  const items = objects.filter(x => typeof x === 'object' && x !== null)
   const entries = ([] as [string, any][]).concat(...items.map(Object.entries))
   return entries.reduce(
     (previous, [key, value]) => {

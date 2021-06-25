@@ -42,6 +42,19 @@ describe('defaultsFavoringLast', () => {
     })
   })
 
+  it('ignores empty values', async () => {
+    const input = [
+      null,
+      undefined,
+      {
+        a: 1,
+      },
+    ]
+    expect(defaultsFavoringLast(input)).toStrictEqual({
+      a: 1,
+    })
+  })
+
   it('defaults to null/undefined', async () => {
     const input = [
       {
