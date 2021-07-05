@@ -9,6 +9,17 @@ describe('isUnicodeCharacter()', () => {
     expect(containsUnicode('love立诚')).toBe(true)
   })
   it('recognizes Japanese', () => {
-    // TODO
+    expect(containsUnicode('レジェンダー')).toBe(true)
+    expect(containsUnicode('arutena 日本')).toBe(true)
+  })
+  it('punctuation can also be unicode e.g. |', () => {
+    for (const char of `。丨？，／`) {
+      expect(containsUnicode(char)).toBe(true)
+    }
+    expect(containsUnicode('SH100C丨DingChunQiu')).toBe(true)
+  })
+  it('unicode English characters', () => {
+    expect(containsUnicode('Ｍ')).toBe(true)
+    expect(containsUnicode('AG ＭCG Marlinpie (Cammy)')).toBe(true)
   })
 })
